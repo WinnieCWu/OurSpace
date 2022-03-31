@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../public/stylesheets/style.css">
+    <link rel="stylesheet" href="../public/stylesheets/style2.css">
+    <title>OurSpace</title>
+</head>
+<body>
+    <div class="d-flex flex-row">
+    <div class="menu col-4 bg-dark">
+        <h1 class="text-light">OurSpace.</h1>
+        <p class="text-light">your account was created on <b>this date</b></p>
+        <button id="postBtn" class="btn-light btn-outline-dark">new post
+            <span class="material-icons align-middle">
+                add_circle_outline
+                </span>
+        </button>
+        <ul class="list-unstyled text-light">
+            <li class="loginList"><a href="/">my comments</a></li>
+            <li class="loginList"><a href="/">my posts</a></li>
+        <li class="loginList"><a href="/">my upvotes</a></li>
+            <li class="loginList"><a href="/">my followers</a></li>
+        </ul>
+        <section class="button-section d-flex flex-column">
+            <button id="logoutBtn" class="btn-light btn-outline-dark">logout
+                <span class="material-icons align-middle logoutIcon">
+                logout
+                </span></button>
+        </section>
+    </div>
+    <div class="row align-items-start col-12">
+    <div class="navbar col-12 d-flex flex-row border-bottom border-dark">
+        <!-- only shows up if user is logged in -->
+        <ul class="list-unstyled d-flex flex-row">
+            <li class="col-6 align-middle">
+                <a href="/">dashboard</a>
+            </li>
+            <li class="col-6 align-middle">
+                <a href="/">settings</a>
+            </li>
+        </ul>
+        <span class="searchIcon material-icons align-middle border border-dark">
+            search
+        </span>
+    </div>
+    <div class="col-12 d-flex">
+        <!-- new post partial -->
+        <section class="newPost col-6">
+            <h2>Title</h2>
+            <textarea id="titleText"></textarea>
+            <h4>Link</h4>
+            <textarea id="linkText"></textarea>
+            <h4>Description</h4>
+            <textarea id="descriptionText"></textarea>
+        </section>
+        <!-- end of new post partial -->
+    </div>
+    </div>
+    </div>
+</body>
+</html>
