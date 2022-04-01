@@ -32,8 +32,9 @@
     font-size: 11px;
 }
 
-.favorite {
-    margin-left: 110px;
+.favorite, #upvoteCount {
+    position: absolute;
+    right: 0px;
 }
 
 .favorite:hover {
