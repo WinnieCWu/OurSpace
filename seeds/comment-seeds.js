@@ -19,7 +19,7 @@ const commentdata = [
   {
     comment_text: 'Super helpful.',
     user_id: 3,
-    post_id: 18
+    post_id: 3
   },
   {
     comment_text: 'Ehhh, I would do this a different way.',
@@ -29,7 +29,7 @@ const commentdata = [
   {
     comment_text: 'Love this site!',
     user_id: 1,
-    post_id: 20
+    post_id: 2
   },
   {
     comment_text: 'I cannot belive this.',
@@ -71,7 +71,7 @@ const commentdata = [
     comment_text:
       'Does this consider different screen sizes?',
     user_id: 5,
-    post_id: 12
+    post_id: 9
   },
   {
     comment_text: `You're still using var...?`,
@@ -92,7 +92,7 @@ const commentdata = [
   {
     comment_text: 'Finally, a solution!',
     user_id: 4,
-    post_id: 11
+    post_id: 5
   },
   {
     comment_text:

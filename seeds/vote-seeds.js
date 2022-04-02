@@ -35,11 +35,11 @@ const votedata = [
   },
   {
     user_id: 3,
-    post_id: 12
+    post_id: 7
   },
   {
     user_id: 9,
-    post_id: 11
+    post_id:4
   }
 ];
 

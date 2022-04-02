@@ -16,8 +16,7 @@ Post.init(
         title: {
             type: DataTypes.STRING,
             allowNull: false,
-            primarykey: true,
-            autoIncrement: true
+            primarykey: true
         },
         post_url: {
             type: DataTypes.STRING,

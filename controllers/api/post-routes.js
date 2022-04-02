@@ -1,18 +1,17 @@
 const router = require("express").Router();
+const sequelize = require('../../config/connection');
 const { Post, User, Comment } = require("../../models");
 
-// get all users
-router.get("/", (req, res) => {
-  console.log("======================");
+router.get('/', (req, res) => {
   Post.findAll({
     attributes: [
-      "id", 
-      "post_url", 
-      "title", 
-      "created_at",
+      'id', 
+      'title', 
+      'post_url',
+      'created_at',
       [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
     ],
-    order: [["created_at", "DESC"]],
+    order: [['created_at', 'DESC']],
     include: [
       {
         model: Comment,
@@ -24,23 +23,25 @@ router.get("/", (req, res) => {
       },
       {
         model: User,
-        attributes: ["username"],
+        attributes: ['username'],
       },
     ],
   })
-    .then((dbPostData) => res.json(dbPostData))
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json(err);
-    });
+  .then(data => {
+    return res.json(data);
+  })
+  .catch((err) => {
+    console.log(err);
+    res.status(500).json(err);
+  });
 });
 
-router.get("/:id", (req, res) => {
+router.get('/:id', (req, res) => {
   Post.findOne({
     where: {
       id: req.params.id,
     },
-    attributes: ["id", "post_url", "title", "created_at"],
+    attributes: ['id', 'title', 'post_url', 'created_at'],
     include: [
       {
         model: Comment,
@@ -52,7 +53,7 @@ router.get("/:id", (req, res) => {
       },
       {
         model: User,
-        attributes: ["username"],
+        attributes: ['username'],
       },
     ],
   })
@@ -70,7 +71,7 @@ router.get("/:id", (req, res) => {
     });
 });
 
-router.post("/", (req, res) => {
+router.post('/', (req, res) => {
   Post.create({
     title: req.body.title,
     post_url: req.body.post_url,
@@ -83,7 +84,7 @@ router.post("/", (req, res) => {
     });
 });
 
-router.put("/:id", (req, res) => {
+router.put('/:id', (req, res) => {
   Post.update(
     {
       title: req.body.title,
@@ -107,7 +108,7 @@ router.put("/:id", (req, res) => {
     });
 });
 
-router.delete("/:id", (req, res) => {
+router.delete('/:id', (req, res) => {
   Post.destroy({
     where: {
       id: req.params.id,
