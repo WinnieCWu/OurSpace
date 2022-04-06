@@ -9,6 +9,5 @@ router.use('/users', userRoutes);
 router.use('/posts', postRoutes);
 router.use('/comments', commentRoutes);
 router.use('/votes', voteRoutes);
-router.use('/', homeRoutes);
 
 module.exports = router;
