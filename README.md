@@ -32,7 +32,7 @@ Simply deploy the secured app on <a href="/">Heroku</a>
 
 ## How our app looks
 
-![Image1](/images/ourspace1.png)
+![Image1](<img width="904" alt="ourspace1" src="https://user-images.githubusercontent.com/95206117/162848265-9c175777-6692-4d3e-be72-aa28b747f574.PNG">)
 ![Image2](/images/ourspace2.png)
 ![Image3](/images/ourspace3.png)
 ![Image4](/images/ourspace4.png)
