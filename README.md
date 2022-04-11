@@ -1,44 +1,41 @@
-## OurSpace, the e-blog for your writing needs.
+# OurSpace.
+Welcome to the new space — our space.
 
-## Description
+## What you can do on OurSpace.
 
-Want to have your own digital space, free to write as you please? Look no further!
-With the OurSpace app, you can start your day off strong by writing out your thoughts, your ideas, your aspirations-- you name it, and it's yours. You can also share it within your networks to get comments from other logged in members.
+Want to have your own digital space to free to write as you please? Look no further!
+
+Here's an all-inclusive forum for any and all netizens looking to:
+
+- read up on the latest news
+- share a little pocket of inspiration
+- comment, like, and post to their heart's content
+
+With OurSpace, you can start your day off strong by writing out your thoughts, your ideas, your aspirations-- you name it, and it's yours. 
 
 ## Technologies used
 
-#As developers, we used the following technologies:
+This app was created for the UC Berkeley Full Stack Development course. It utilizes the following technologies:
 
 1. Node.js and Express.js to create a RESTful API with the MVC (Model View Controller) architecture;
    1a) Node allows us to access Handlebars, our template engine, and Express allows us to use session, to store useful user input (excluding passwords) when logged in in cookies;
 2. Dotenv, a Node.js library, to protect private data and secure the app, along with authentication processes;
 3. Jest, a Node.js library, to test certain methods before using them;
-4. Moment.js, a Node.js library, to capture current date and time of user interaction, like comments on posts;
-5. Handlebars.js as our template engine;
-6. MySQL and the Sequelize ORM for our database to store user data and their content, 
-7. ESLint, and
-8. Heroku, where we deployed our app, which is now live 24/7.
+4. Handlebars.js as our template engine;
+5. MySQL and the Sequelize ORM for our database to store user data and their content, and
+6. ESLint, which makes codes more consistent and avoids bugs.
 
-#To use the technologies, developers must install the apps by running the following commands in the Integrated Terminal:
-
-1. npm init -y (to initialize the application)
-2. npm install nodemon express dotenv moment express mysql2 sequelize
-3. npm i express-session connect-session-sequelize
-4. npm install jest --save-dev (to install jest) and changee the 'test:' to "jest" in package.json.
-
-#After installing them, you must add the variables to the top of server.js and require them. For instance, "const express = require('express')" and then use the code "app.use ...", such as "app.use(express.urlencoded({extended:false})); app.use(express.json()); "
 
 ## How OurSpace blog app works
 
-#To run the app in the terminal as a developer, access the server.js file and type in the terminal: npm test (to run Jest) or npm start (to start the server). The app can then be opened in "localhost:3001" in Heroku.
-
-#As users, no files need to be installed. New users can click on the sign-up button to create an account. Users can log in if they have an existing account, and then enter a different main, secure page, where they can write posts to their hearts content.
+Simply deploy the secured app on <a href="/">Heroku</a>
 
 ## How our app looks
 
-![Image1](/assets/images/ourspace1.png)
-![Image2](/assets/images/ourspace2.png)
-![Image3](/assets/images/ourspace3.png)
+![Image1](/images/ourspace1.png)
+![Image2](/images/ourspace2.png)
+![Image3](/images/ourspace3.png)
+![Image4](/images/ourspace4.png)
 
 ## Link to deployed application
 
@@ -49,4 +46,5 @@ GitHub Inspo Repo: https://github.com/WinnieCWu/OurSpace.git
 Winnie C. Wu (@ https://github.com/WinnieCWu),
 Sandy Chen (@ https://github.com/sandycchen),
 Alexandra Holden (@ https://github.com/descardi-b), &
-Aaron H. Leung (@ https://github.com/aaronhleung)
+Aaron H. Leung (@ https://github.com/aaronhleung),
+
