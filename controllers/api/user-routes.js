@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const { User, Post, Comment, Vote } = require("../../models");
-
+const withAuth = require('../../utils/auth');
 // get all users
 router.get("/", (req, res) => {
   User.findAll({
@@ -54,7 +54,7 @@ router.get("/:id", (req, res) => {
     });
 });
 
-router.post("/", (req, res) => {
+router.post("/", withAuth, (req, res) => {
   User.create({
     username: req.body.username,
     email: req.body.email,
@@ -75,7 +75,7 @@ router.post("/", (req, res) => {
     });
 });
 
-router.post("/login", (req, res) => {
+router.post("/login", withAuth, (req, res) => {
   User.findOne({
     where: {
       email: req.body.email,
@@ -102,7 +102,18 @@ router.post("/login", (req, res) => {
   });
 });
 
-router.put("/:id", (req, res) => {
+router.post('/logout', withAuth, (req,res) => {
+  if (req.session.loggedIn) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  }
+  else {
+    res.status(404).end();
+  }
+});
+
+router.put("/:id", withAuth, (req, res) => {
   // pass in req.body instead to only update what's passed through
   User.update(req.body, {
     individualHooks: true,
@@ -120,10 +131,11 @@ router.put("/:id", (req, res) => {
     .catch(err => {
       console.log(err);
       res.status(500).json(err);
+      console.log('User successfully updated');
     });
 });
 
-router.delete("/:id", (req, res) => {
+router.delete("/:id", withAuth, (req, res) => {
   User.destroy({
     where: {
       id: req.params.id,
@@ -139,6 +151,7 @@ router.delete("/:id", (req, res) => {
     .catch(err => {
       console.log(err);
       res.status(500).json(err);
+      console.log('User successfully deleted');
     });
 });
 
