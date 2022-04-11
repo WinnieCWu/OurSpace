@@ -36,13 +36,13 @@ With the OurSpace app, you can start your day off strong by writing out your tho
 
 ## How our app looks
 
-![Image1](/assets/images/ourspaceX.png)
-![Image2](/assets/images/ourspaceXX.png)
-![Image3](/assets/images/ourspaceXXX.png)
+![Image1](/assets/images/ourspace1.png)
+![Image2](/assets/images/ourspace2.png)
+![Image3](/assets/images/ourspace3.png)
 
 ## Link to deployed application
 
-GitHub Inspo Repo:
+GitHub Inspo Repo: https://github.com/WinnieCWu/OurSpace.git
 
 ## Collaborators
 
