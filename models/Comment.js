@@ -20,11 +20,12 @@ Comment.init(
         },
         user_id: {
             type: DataTypes.INTEGER,
-            referencs: {
+            references: {
                 model: 'user',
                 key: 'id'
             }
         },
+        // post id foreign key
         post_id: {
             type: DataTypes.INTEGER,
             references: {

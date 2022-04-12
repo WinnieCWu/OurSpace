@@ -12,13 +12,12 @@ async function signupFormHandler(event) {
       body: JSON.stringify({
         username,
         email,
-        password,
+        password
       }),
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json" }
     });
     // check the response status with '.ok' property on response object
     if (response.ok) {
-      console.log("success");
       document.location.replace("/dashboard/");
     } else {
       alert(response.statusText);
@@ -39,7 +38,7 @@ async function loginFormHandler(event) {
         email,
         password,
       }),
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json" }
     });
     // check the response status with '.ok' property on response object
     if (response.ok) {
@@ -50,9 +49,5 @@ async function loginFormHandler(event) {
   }
 }
 
-document
-  .querySelector(".signup-form")
-  .addEventListener("submit", signupFormHandler);
-document
-  .querySelector(".login-form")
-  .addEventListener("submit", loginFormHandler);
+document.querySelector(".login-form").addEventListener("submit", loginFormHandler);
+document.querySelector(".signup-form").addEventListener("submit", signupFormHandler);

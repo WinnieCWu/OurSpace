@@ -44,10 +44,7 @@ router.get('/', withAuth, (req, res) => {
 });
 
 router.get('/edit/:id', withAuth, (res,req) => {
-  Post.findOne({
-    where: {
-      id: req.params.id
-    },
+  Post.findByPk(req.params.id, {
     attributes: [
       'id',
       'post_url',
@@ -72,9 +69,6 @@ router.get('/edit/:id', withAuth, (res,req) => {
   })
     .then(dbPostData => {
       if (!dbPostData) {
-        res.status(404).json({ message: 'No post found with this id' });
-        return;
-      }
 
       // serialize the data
       const post = dbPostData.get({ plain: true });
@@ -84,9 +78,11 @@ router.get('/edit/:id', withAuth, (res,req) => {
         post,
         loggedIn: true
       });
-    })
+    } else {
+      res.status(404).end();
+    }
+  })
     .catch(err => {
-      console.log(err);
       res.status(500).json(err);
     });
 });

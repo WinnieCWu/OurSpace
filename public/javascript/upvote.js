@@ -13,7 +13,7 @@ async function upvoteClickHandler(event) {
       }),
       headers: {
         "Content-Type": "application/json",
-      },
+      }
     });
   
     if (response.ok) {
@@ -23,7 +23,5 @@ async function upvoteClickHandler(event) {
     }
   }
   
-  document
-    .querySelector(".upvote-btn")
-    .addEventListener("click", upvoteClickHandler);
+  document.querySelector(".upvote-btn").addEventListener("click", upvoteClickHandler);
   
