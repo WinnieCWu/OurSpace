@@ -28,7 +28,7 @@ This app was created for the UC Berkeley Full Stack Development course. It utili
 
 ## How OurSpace blog app works
 
-Simply deploy the secured app on <a href="/">Heroku</a>
+Simply deploy the secured app on https://obscure-citadel-61027.herokuapp.com/.
 
 ## How our app looks
 
